@@ -162,7 +162,7 @@ public class NCGameControllerUnity : MonoBehaviour
 
     // Returns true if the most recently touched controller has an "extended" controller profile
     // Apple defines this as a controller that has 4 face buttons, 4 shoulder buttons, 2 analog sticks and a dpad
-    public static bool DeviceHasExtededControllerConnected() {
+    public static bool DeviceHasExtendedControllerConnected() {
         return NCControllerHasExtendedProfile();
     }
 
