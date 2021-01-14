@@ -200,6 +200,7 @@ public class NCGameControllerUnity : MonoBehaviour
 
     // Get the apple glyph for the given control element, based on the controller which we are registered to receive input from
     // Note that you cannot get glyphs until you register a controller input handler
+    // Also note that these will not all glyphs are the same size
     public static Texture2D GetGlyph(NCControlElementID elementID) {
         long len = NCGenerateGlyphForInput((int)elementID);
 
