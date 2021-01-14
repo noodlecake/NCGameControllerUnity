@@ -1,22 +1,30 @@
-﻿using System;
+﻿//
+//  NCGameControllerUnity.cs
+//  NCGameControllerUnity
+//
+//  Created by Ben Schmidt on 2021-01-6.
+//  Copyright © 2021 Noodlecake Studios Inc. All rights reserved.
+//
+
+//Uncomment this to use the sample program that logs input and draws glyphs to the screen
+//#define NC_CONTROLLER_TEST
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class NCControllerWrapper : MonoBehaviour
+public class NCGameControllerUnity : MonoBehaviour
 {
 #if (UNITY_IOS || UNITY_TVOS || UNITY_STANDALONE_OSX)
     //*************************
     // Internal stuff
     //*************************
 
-    // Set to true to set everything up for testing - you'll see inputs etc in the unity logs
-    private const bool _test = false;
-
-    private Sprite _glyphSprite;
-    private SpriteRenderer _spriteRenderer;
+    private static Sprite _glyphSprite;
+    private static SpriteRenderer _spriteRenderer;
 
     // Import the functionality from the Xcode plugin
 
@@ -148,46 +156,46 @@ public class NCControllerWrapper : MonoBehaviour
     ///// Methods
 
     // Returns true if any controller is connected to the device
-    public bool DeviceHasControllerConnected() {
+    public static bool DeviceHasControllerConnected() {
         return NCControllerConnected();
     }
 
     // Returns true if the most recently touched controller has an "extended" controller profile
     // Apple defines this as a controller that has 4 face buttons, 4 shoulder buttons, 2 analog sticks and a dpad
-    public bool DeviceHasExtededControllerConnected() {
+    public static bool DeviceHasExtededControllerConnected() {
         return NCControllerHasExtendedProfile();
     }
 
     // Registers whatever delegate you pass in to be called whenever the current controller has input state changes
     // Returns true if the delegate is successfully registered for callbacks
-    public bool RegisterControllerInputCallback(NCControllerInputDelgate del) {
+    public static bool RegisterControllerInputCallback(NCControllerInputDelgate del) {
         _inputDelegateInstance = del;
         return NCRegisterInputCallback(del);
     }
 
     // Registers whatever delegate you pass in to be called whenever a new controller is connected to the device
     // Returns true if the delegate is successfully registered for callbacks
-    public bool RegisterControllerConnectedCallback(NCControllerConnectedDelgate del) {
+    public static bool RegisterControllerConnectedCallback(NCControllerConnectedDelgate del) {
         _connectedDelegateInstance = del;
         return NCRegisterControllerConnectedCallback(del);
     }
 
     // Registers whatever delegate you pass in to be called whenever the controller that has registered to receive input callbacks disconnects from the device
     // Returns true if the delegate is successfully registered for callbacks
-    public bool RegisterControllerDisconnectedCallback(NCControllerDisconnectedDelgate del) {
+    public static bool RegisterControllerDisconnectedCallback(NCControllerDisconnectedDelgate del) {
         _disconnectedDelegateInstance = del;
         return NCRegisterControllerDisconnectedCallback(del);
     }
 
     // Lets you customize the style of the glyphs that Apple provides
     // Any glyphs generated after setting the style will use the style that was set
-    public void SetGlyphStyle(float pointSize, NCSymbolWeight weight, bool fill, float red, float green, float blue) {
+    public static void SetGlyphStyle(float pointSize, NCSymbolWeight weight, bool fill, float red, float green, float blue) {
         NCSetSymbolStyle(pointSize, (int)weight, fill, red, green, blue);
     }
 
     // Get the apple glyph for the given control element, based on the controller which we are registered to receive input from
     // Note that you cannot get glyphs until you register a controller input handler
-    public Texture2D GetGlyph(NCControlElementID elementID) {
+    public static Texture2D GetGlyph(NCControlElementID elementID) {
         long len = NCGenerateGlyphForInput((int)elementID);
 
         Texture2D tex = new Texture2D(1,1);
@@ -200,29 +208,28 @@ public class NCControllerWrapper : MonoBehaviour
     }
 
     //*************************
-    // Test stuff
+    // Test stuff - uncomment the NC_CONTROLLER_TEST define at the top of the file to use
     //*************************
-    private static NCControllerWrapper testWrapper;
+#if NC_CONTROLLER_TEST
+    private static NCGameControllerUnity testWrapper;
     void Start()
     {
-        if (_test) {
-            _spriteRenderer = gameObject.AddComponent<SpriteRenderer>() as SpriteRenderer;
+        _spriteRenderer = gameObject.AddComponent<SpriteRenderer>() as SpriteRenderer;
 
-            try {
-                testWrapper = this;
+        try {
+            testWrapper = this;
 
-                Debug.Log("Controller Connected: " + this.DeviceHasControllerConnected());
-                Debug.Log("Has Extended Profile: " + this.DeviceHasExtededControllerConnected());
+            Debug.Log("Controller Connected: " + NCGameControllerUnity.DeviceHasControllerConnected());
+            Debug.Log("Has Extended Profile: " + NCGameControllerUnity.DeviceHasExtededControllerConnected());
 
-                Debug.Log("Register Input Callback: " + this.RegisterControllerInputCallback(ControllerInputTest));
-                Debug.Log("Register Connected Callback: " + this.RegisterControllerConnectedCallback(ControllerConnectedTest));
-                Debug.Log("Register Disconnected Callback: " + this.RegisterControllerDisconnectedCallback(ControllerDisonnectedTest));
+            Debug.Log("Register Input Callback: " + NCGameControllerUnity.RegisterControllerInputCallback(ControllerInputTest));
+            Debug.Log("Register Connected Callback: " + NCGameControllerUnity.RegisterControllerConnectedCallback(ControllerConnectedTest));
+            Debug.Log("Register Disconnected Callback: " + NCGameControllerUnity.RegisterControllerDisconnectedCallback(ControllerDisonnectedTest));
 
-                SetGlyphStyle(100, NCSymbolWeight.Light, true, 0.0f, 1.0f, 1.0f);
+            SetGlyphStyle(100, NCSymbolWeight.Light, true, 0.0f, 1.0f, 1.0f);
 
-            } catch (Exception e) {
-                Debug.Log("NCControllerWrapper Error: " + e);
-            }
+        } catch (Exception e) {
+            Debug.Log("NCGameControllerUnity Error: " + e);
         }
     }
 
@@ -233,14 +240,16 @@ public class NCControllerWrapper : MonoBehaviour
     }
 
     [AOT.MonoPInvokeCallback(typeof(NCControllerInputDelgate))]
-    private static void ControllerInputTest(int id, float val1, float val2) {
+    private static void ControllerInputTest(int id, float val1, float val2)
+    {
+        if (!Application.isPlaying) return;
         if (id >= 0 && id < Enum.GetNames(typeof(NCControlElementID)).Length) {
             Debug.Log("Controller Input! ID: " + ((NCControlElementID)id).ToString("g") + "   val1: " + val1 + "   val2: " + val2);
             
             //"Dpad" and "ButtonUp" etc buttons come in at the same time
             //Comment out Dpad here so that we can see individual dpad buttons
             if ((NCControlElementID)id != NCControlElementID.Dpad) {
-                NCControllerWrapper.testWrapper.DisplayGlyph((NCControlElementID)id);
+                NCGameControllerUnity.testWrapper.DisplayGlyph((NCControlElementID)id);
             }
         }
     }
@@ -248,14 +257,17 @@ public class NCControllerWrapper : MonoBehaviour
     [AOT.MonoPInvokeCallback(typeof(NCControllerConnectedDelgate))]
     private static void ControllerConnectedTest()
     {
+        if (!Application.isPlaying) return;
         Debug.Log("Controller Connected!");
-        Debug.Log("Register Input Callback: " + testWrapper.RegisterControllerInputCallback(ControllerInputTest));
+        Debug.Log("Register Input Callback: " + NCGameControllerUnity.RegisterControllerInputCallback(ControllerInputTest));
     }
 
     [AOT.MonoPInvokeCallback(typeof(NCControllerDisconnectedDelgate))]
     private static void ControllerDisonnectedTest()
     {
+        if (!Application.isPlaying) return;
         Debug.Log("Controller Disconnected!");
     }
+#endif
 #endif
 }
