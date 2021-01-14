@@ -49,6 +49,7 @@ static UIImageSymbolConfiguration *glyph_config;
 static UIColor *glyph_color;
 #endif
 static BOOL glyph_fill;
+static BOOL glyph_square;
 static NSData *last_glyph;
 
 
@@ -268,8 +269,9 @@ BOOL NCRegisterControllerDisconnectedCallback(void (*unity_callback)(void)) {
 //***************************
 //Get Glyphs
 //***************************
-void NCSetSymbolStyle(float pointSize, SymbolWeight weight, BOOL fill, float red, float green, float blue) {
+void NCSetSymbolStyle(float pointSize, SymbolWeight weight, BOOL fill, BOOL forceSquare, float red, float green, float blue) {
     glyph_fill = fill;
+    glyph_square = forceSquare;
     
 #if TARGET_OS_OSX
     glyph_color = [NSColor colorWithRed:red green:green blue:blue alpha:1];
@@ -509,6 +511,27 @@ long NCGenerateGlyphForInput(ControlElementID elemID) {
         NSRectFillUsingOperation(imageRect, NSCompositingOperationSourceIn);
         [glyph unlockFocus];
     }
+    
+    if (glyph_square) {
+        CGFloat size = glyph.size.width;
+        if (glyph.size.height > glyph.size.width) {
+            size = glyph.size.height;
+        }
+        
+        NSImage *squareImage = [[NSImage alloc] initWithSize:CGSizeMake(size, size)];
+
+        [squareImage lockFocus];
+        [glyph drawInRect:NSMakeRect((size - glyph.size.width) / 2.0f,
+                                             (size - glyph.size.height) / 2.0f,
+                                             glyph.size.width,
+                                             glyph.size.height)
+                         fromRect:NSZeroRect
+                        operation:NSCompositingOperationSourceOver
+                         fraction:1];
+        [squareImage unlockFocus];
+
+        glyph = squareImage;
+    }
 
     //making the png data is also harder on mac
     NSData *imageData = [glyph TIFFRepresentation];
@@ -528,6 +551,27 @@ long NCGenerateGlyphForInput(ControlElementID elemID) {
     
     if (glyph_color) {
         glyph = [glyph imageWithTintColor:glyph_color];
+    }
+    
+    if (glyph_square) {
+        // Setup a new context with the correct size
+        CGFloat size = glyph.size.width;
+        if (glyph.size.height > glyph.size.width) {
+            size = glyph.size.height;
+        }
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(size, size), NO, 0.0);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        UIGraphicsPushContext(context);
+
+        // Now we can draw anything we want into this new context.
+        CGPoint origin = CGPointMake((size - glyph.size.width) / 2.0f,
+                                    (size - glyph.size.height) / 2.0f);
+        [glyph drawAtPoint:origin];
+
+        // Clean up and get the new image.
+        UIGraphicsPopContext();
+        glyph = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
     }
     
     last_glyph = UIImagePNGRepresentation(glyph);

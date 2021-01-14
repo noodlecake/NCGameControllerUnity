@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B5ACCE1625B0D59500760B4D /* GameControllerWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B5ACCE1525B0D59500760B4D /* GameControllerWrapper.m */; };
+		B5E2AE0725A6793F00E541C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E2AE0625A6793F00E541C9 /* AppDelegate.m */; };
+		B5E2AE0925A6793F00E541C9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5E2AE0825A6793F00E541C9 /* GameScene.sks */; };
+		B5E2AE0B25A6793F00E541C9 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5E2AE0A25A6793F00E541C9 /* Actions.sks */; };
+		B5E2AE0E25A6793F00E541C9 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E2AE0D25A6793F00E541C9 /* GameScene.m */; };
+		B5E2AE1125A6793F00E541C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E2AE1025A6793F00E541C9 /* ViewController.m */; };
+		B5E2AE1325A6794200E541C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E2AE1225A6794200E541C9 /* Assets.xcassets */; };
+		B5E2AE1625A6794200E541C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E2AE1425A6794200E541C9 /* Main.storyboard */; };
+		B5E2AE1925A6794200E541C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E2AE1825A6794200E541C9 /* main.m */; };
+		B5E2AE2425A6794200E541C9 /* GameControllerWrapperTesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E2AE2325A6794200E541C9 /* GameControllerWrapperTesterTests.m */; };
+		B5E2AE2F25A6794200E541C9 /* GameControllerWrapperTesterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E2AE2E25A6794200E541C9 /* GameControllerWrapperTesterUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5E2AE2025A6794200E541C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5E2ADFA25A6793F00E541C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5E2AE0125A6793F00E541C9;
+			remoteInfo = GameControllerWrapperTester;
+		};
+		B5E2AE2B25A6794200E541C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5E2ADFA25A6793F00E541C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5E2AE0125A6793F00E541C9;
+			remoteInfo = GameControllerWrapperTester;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B5ACCE1425B0D59500760B4D /* GameControllerWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameControllerWrapper.h; path = Source/GameControllerWrapper.h; sourceTree = SOURCE_ROOT; };
+		B5ACCE1525B0D59500760B4D /* GameControllerWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameControllerWrapper.m; path = Source/GameControllerWrapper.m; sourceTree = SOURCE_ROOT; };
+		B5E2AE0225A6793F00E541C9 /* GameControllerWrapperTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameControllerWrapperTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E2AE0525A6793F00E541C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B5E2AE0625A6793F00E541C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B5E2AE0825A6793F00E541C9 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		B5E2AE0A25A6793F00E541C9 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		B5E2AE0C25A6793F00E541C9 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		B5E2AE0D25A6793F00E541C9 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		B5E2AE0F25A6793F00E541C9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B5E2AE1025A6793F00E541C9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B5E2AE1225A6794200E541C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5E2AE1525A6794200E541C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5E2AE1725A6794200E541C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5E2AE1825A6794200E541C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5E2AE1A25A6794200E541C9 /* GameControllerWrapperTester.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameControllerWrapperTester.entitlements; sourceTree = "<group>"; };
+		B5E2AE1F25A6794200E541C9 /* GameControllerWrapperTesterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameControllerWrapperTesterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E2AE2325A6794200E541C9 /* GameControllerWrapperTesterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameControllerWrapperTesterTests.m; sourceTree = "<group>"; };
+		B5E2AE2525A6794200E541C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5E2AE2A25A6794200E541C9 /* GameControllerWrapperTesterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameControllerWrapperTesterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E2AE2E25A6794200E541C9 /* GameControllerWrapperTesterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameControllerWrapperTesterUITests.m; sourceTree = "<group>"; };
+		B5E2AE3025A6794200E541C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5E2ADFF25A6793F00E541C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E2AE1C25A6794200E541C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E2AE2725A6794200E541C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5E2ADF925A6793F00E541C9 = {
+			isa = PBXGroup;
+			children = (
+				B5E2AE0425A6793F00E541C9 /* GameControllerWrapperTester */,
+				B5E2AE2225A6794200E541C9 /* GameControllerWrapperTesterTests */,
+				B5E2AE2D25A6794200E541C9 /* GameControllerWrapperTesterUITests */,
+				B5E2AE0325A6793F00E541C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5E2AE0325A6793F00E541C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5E2AE0225A6793F00E541C9 /* GameControllerWrapperTester.app */,
+				B5E2AE1F25A6794200E541C9 /* GameControllerWrapperTesterTests.xctest */,
+				B5E2AE2A25A6794200E541C9 /* GameControllerWrapperTesterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5E2AE0425A6793F00E541C9 /* GameControllerWrapperTester */ = {
+			isa = PBXGroup;
+			children = (
+				B5ACCE1425B0D59500760B4D /* GameControllerWrapper.h */,
+				B5ACCE1525B0D59500760B4D /* GameControllerWrapper.m */,
+				B5E2AE0525A6793F00E541C9 /* AppDelegate.h */,
+				B5E2AE0625A6793F00E541C9 /* AppDelegate.m */,
+				B5E2AE0825A6793F00E541C9 /* GameScene.sks */,
+				B5E2AE0A25A6793F00E541C9 /* Actions.sks */,
+				B5E2AE0C25A6793F00E541C9 /* GameScene.h */,
+				B5E2AE0D25A6793F00E541C9 /* GameScene.m */,
+				B5E2AE0F25A6793F00E541C9 /* ViewController.h */,
+				B5E2AE1025A6793F00E541C9 /* ViewController.m */,
+				B5E2AE1225A6794200E541C9 /* Assets.xcassets */,
+				B5E2AE1425A6794200E541C9 /* Main.storyboard */,
+				B5E2AE1725A6794200E541C9 /* Info.plist */,
+				B5E2AE1825A6794200E541C9 /* main.m */,
+				B5E2AE1A25A6794200E541C9 /* GameControllerWrapperTester.entitlements */,
+			);
+			path = GameControllerWrapperTester;
+			sourceTree = "<group>";
+		};
+		B5E2AE2225A6794200E541C9 /* GameControllerWrapperTesterTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5E2AE2325A6794200E541C9 /* GameControllerWrapperTesterTests.m */,
+				B5E2AE2525A6794200E541C9 /* Info.plist */,
+			);
+			path = GameControllerWrapperTesterTests;
+			sourceTree = "<group>";
+		};
+		B5E2AE2D25A6794200E541C9 /* GameControllerWrapperTesterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B5E2AE2E25A6794200E541C9 /* GameControllerWrapperTesterUITests.m */,
+				B5E2AE3025A6794200E541C9 /* Info.plist */,
+			);
+			path = GameControllerWrapperTesterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5E2AE0125A6793F00E541C9 /* GameControllerWrapperTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5E2AE3325A6794200E541C9 /* Build configuration list for PBXNativeTarget "GameControllerWrapperTester" */;
+			buildPhases = (
+				B5E2ADFE25A6793F00E541C9 /* Sources */,
+				B5E2ADFF25A6793F00E541C9 /* Frameworks */,
+				B5E2AE0025A6793F00E541C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GameControllerWrapperTester;
+			productName = GameControllerWrapperTester;
+			productReference = B5E2AE0225A6793F00E541C9 /* GameControllerWrapperTester.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5E2AE1E25A6794200E541C9 /* GameControllerWrapperTesterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5E2AE3625A6794200E541C9 /* Build configuration list for PBXNativeTarget "GameControllerWrapperTesterTests" */;
+			buildPhases = (
+				B5E2AE1B25A6794200E541C9 /* Sources */,
+				B5E2AE1C25A6794200E541C9 /* Frameworks */,
+				B5E2AE1D25A6794200E541C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5E2AE2125A6794200E541C9 /* PBXTargetDependency */,
+			);
+			name = GameControllerWrapperTesterTests;
+			productName = GameControllerWrapperTesterTests;
+			productReference = B5E2AE1F25A6794200E541C9 /* GameControllerWrapperTesterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B5E2AE2925A6794200E541C9 /* GameControllerWrapperTesterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5E2AE3925A6794200E541C9 /* Build configuration list for PBXNativeTarget "GameControllerWrapperTesterUITests" */;
+			buildPhases = (
+				B5E2AE2625A6794200E541C9 /* Sources */,
+				B5E2AE2725A6794200E541C9 /* Frameworks */,
+				B5E2AE2825A6794200E541C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5E2AE2C25A6794200E541C9 /* PBXTargetDependency */,
+			);
+			name = GameControllerWrapperTesterUITests;
+			productName = GameControllerWrapperTesterUITests;
+			productReference = B5E2AE2A25A6794200E541C9 /* GameControllerWrapperTesterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5E2ADFA25A6793F00E541C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					B5E2AE0125A6793F00E541C9 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					B5E2AE1E25A6794200E541C9 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = B5E2AE0125A6793F00E541C9;
+					};
+					B5E2AE2925A6794200E541C9 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = B5E2AE0125A6793F00E541C9;
+					};
+				};
+			};
+			buildConfigurationList = B5E2ADFD25A6793F00E541C9 /* Build configuration list for PBXProject "GameControllerWrapperTester" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5E2ADF925A6793F00E541C9;
+			productRefGroup = B5E2AE0325A6793F00E541C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5E2AE0125A6793F00E541C9 /* GameControllerWrapperTester */,
+				B5E2AE1E25A6794200E541C9 /* GameControllerWrapperTesterTests */,
+				B5E2AE2925A6794200E541C9 /* GameControllerWrapperTesterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5E2AE0025A6793F00E541C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E2AE0925A6793F00E541C9 /* GameScene.sks in Resources */,
+				B5E2AE1325A6794200E541C9 /* Assets.xcassets in Resources */,
+				B5E2AE0B25A6793F00E541C9 /* Actions.sks in Resources */,
+				B5E2AE1625A6794200E541C9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E2AE1D25A6794200E541C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E2AE2825A6794200E541C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5E2ADFE25A6793F00E541C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E2AE1125A6793F00E541C9 /* ViewController.m in Sources */,
+				B5E2AE0E25A6793F00E541C9 /* GameScene.m in Sources */,
+				B5ACCE1625B0D59500760B4D /* GameControllerWrapper.m in Sources */,
+				B5E2AE1925A6794200E541C9 /* main.m in Sources */,
+				B5E2AE0725A6793F00E541C9 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E2AE1B25A6794200E541C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E2AE2425A6794200E541C9 /* GameControllerWrapperTesterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E2AE2625A6794200E541C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E2AE2F25A6794200E541C9 /* GameControllerWrapperTesterUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5E2AE2125A6794200E541C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5E2AE0125A6793F00E541C9 /* GameControllerWrapperTester */;
+			targetProxy = B5E2AE2025A6794200E541C9 /* PBXContainerItemProxy */;
+		};
+		B5E2AE2C25A6794200E541C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5E2AE0125A6793F00E541C9 /* GameControllerWrapperTester */;
+			targetProxy = B5E2AE2B25A6794200E541C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5E2AE1425A6794200E541C9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5E2AE1525A6794200E541C9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5E2AE3125A6794200E541C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B5E2AE3225A6794200E541C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B5E2AE3425A6794200E541C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GameControllerWrapperTester/GameControllerWrapperTester.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B4RVU3QSEC;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = GameControllerWrapperTester/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.noodlecake.gamecontrollerwrappertester.GameControllerWrapperTester;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B5E2AE3525A6794200E541C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GameControllerWrapperTester/GameControllerWrapperTester.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B4RVU3QSEC;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = GameControllerWrapperTester/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.noodlecake.gamecontrollerwrappertester.GameControllerWrapperTester;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B5E2AE3725A6794200E541C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B4RVU3QSEC;
+				INFOPLIST_FILE = GameControllerWrapperTesterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noodlecake.gamecontrollerwrappertester.GameControllerWrapperTesterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameControllerWrapperTester.app/Contents/MacOS/GameControllerWrapperTester";
+			};
+			name = Debug;
+		};
+		B5E2AE3825A6794200E541C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B4RVU3QSEC;
+				INFOPLIST_FILE = GameControllerWrapperTesterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noodlecake.gamecontrollerwrappertester.GameControllerWrapperTesterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameControllerWrapperTester.app/Contents/MacOS/GameControllerWrapperTester";
+			};
+			name = Release;
+		};
+		B5E2AE3A25A6794200E541C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B4RVU3QSEC;
+				INFOPLIST_FILE = GameControllerWrapperTesterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.noodlecake.gamecontrollerwrappertester.GameControllerWrapperTesterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GameControllerWrapperTester;
+			};
+			name = Debug;
+		};
+		B5E2AE3B25A6794200E541C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B4RVU3QSEC;
+				INFOPLIST_FILE = GameControllerWrapperTesterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.noodlecake.gamecontrollerwrappertester.GameControllerWrapperTesterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GameControllerWrapperTester;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5E2ADFD25A6793F00E541C9 /* Build configuration list for PBXProject "GameControllerWrapperTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E2AE3125A6794200E541C9 /* Debug */,
+				B5E2AE3225A6794200E541C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5E2AE3325A6794200E541C9 /* Build configuration list for PBXNativeTarget "GameControllerWrapperTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E2AE3425A6794200E541C9 /* Debug */,
+				B5E2AE3525A6794200E541C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5E2AE3625A6794200E541C9 /* Build configuration list for PBXNativeTarget "GameControllerWrapperTesterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E2AE3725A6794200E541C9 /* Debug */,
+				B5E2AE3825A6794200E541C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5E2AE3925A6794200E541C9 /* Build configuration list for PBXNativeTarget "GameControllerWrapperTesterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E2AE3A25A6794200E541C9 /* Debug */,
+				B5E2AE3B25A6794200E541C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5E2ADFA25A6793F00E541C9 /* Project object */;
+}

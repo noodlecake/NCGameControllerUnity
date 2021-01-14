@@ -45,7 +45,7 @@ public class NCGameControllerUnity : MonoBehaviour
     private static extern bool NCRegisterControllerDisconnectedCallback(NCControllerDisconnectedDelgate callback);
 
     [DllImport ("__Internal")]
-    private static extern void NCSetSymbolStyle(float pointSize, int weight, bool fill, float red, float green, float blue);
+    private static extern void NCSetSymbolStyle(float pointSize, int weight, bool fill, bool forceSquare, float red, float green, float blue);
 
     [DllImport ("__Internal")]
     private static extern long NCGenerateGlyphForInput(int id);
@@ -70,7 +70,7 @@ public class NCGameControllerUnity : MonoBehaviour
     private static extern bool NCRegisterControllerDisconnectedCallback(NCControllerDisconnectedDelgate callback);
 
     [DllImport("GameControllerWrapperMac")]
-    private static extern void NCSetSymbolStyle(float pointSize, int weight, bool fill, float red, float green, float blue);
+    private static extern void NCSetSymbolStyle(float pointSize, int weight, bool fill, bool forceSquare, float red, float green, float blue);
 
     [DllImport("GameControllerWrapperMac")]
     private static extern long NCGenerateGlyphForInput(int id);
@@ -189,8 +189,13 @@ public class NCGameControllerUnity : MonoBehaviour
 
     // Lets you customize the style of the glyphs that Apple provides
     // Any glyphs generated after setting the style will use the style that was set
-    public static void SetGlyphStyle(float pointSize, NCSymbolWeight weight, bool fill, float red, float green, float blue) {
-        NCSetSymbolStyle(pointSize, (int)weight, fill, red, green, blue);
+    // pointSize - basically the font size of the glyph
+    // weight - similar to fonts, go check the NCSymbolWeight enum
+    // fill - if true, it will try to use the "filled" version of the symbols that apple provides
+    // forceSquare - return textures with padding to make them a square rather than the original size provided by Apple
+    // red, green, blue - color the texture
+    public static void SetGlyphStyle(float pointSize, NCSymbolWeight weight, bool fill, bool forceSquare, float red, float green, float blue) {
+        NCSetSymbolStyle(pointSize, (int)weight, fill, forceSquare, red, green, blue);
     }
 
     // Get the apple glyph for the given control element, based on the controller which we are registered to receive input from
@@ -226,7 +231,7 @@ public class NCGameControllerUnity : MonoBehaviour
             Debug.Log("Register Connected Callback: " + NCGameControllerUnity.RegisterControllerConnectedCallback(ControllerConnectedTest));
             Debug.Log("Register Disconnected Callback: " + NCGameControllerUnity.RegisterControllerDisconnectedCallback(ControllerDisonnectedTest));
 
-            SetGlyphStyle(100, NCSymbolWeight.Light, true, 0.0f, 1.0f, 1.0f);
+            SetGlyphStyle(100, NCSymbolWeight.Light, true, true, 0.0f, 1.0f, 1.0f);
 
         } catch (Exception e) {
             Debug.Log("NCGameControllerUnity Error: " + e);
@@ -235,6 +240,7 @@ public class NCGameControllerUnity : MonoBehaviour
 
     public void DisplayGlyph(NCControlElementID id) {
         Texture2D tex = GetGlyph(id);
+        Debug.Log("Texture size is " + tex.width + " x " + tex.height);
         _glyphSprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100.0f);
         _spriteRenderer.sprite = _glyphSprite;
     }

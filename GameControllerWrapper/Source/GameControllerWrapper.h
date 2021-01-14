@@ -52,7 +52,7 @@ BOOL NCRegisterControllerConnectedCallback(void (*unity_callback)(void));
 BOOL NCRegisterControllerDisconnectedCallback(void (*unity_callback)(void));
 
 //Get Glyphs
-void NCSetSymbolStyle(float pointSize, SymbolWeight weight, BOOL fill, float red, float green, float blue);
+void NCSetSymbolStyle(float pointSize, SymbolWeight weight, BOOL fill, BOOL forceSquare, float red, float green, float blue);
 long NCGenerateGlyphForInput(ControlElementID elemID);
 BOOL NCGetGeneratedGlyph(Byte *imgBuffer);
 
