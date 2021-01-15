@@ -3,7 +3,7 @@ This is an example of how to get the glyphs from Apple's Game Controller framewo
 Special thanks to Joon for providing this!
 
 1. Unzip TMPCustomSprites.zip and place it in you Unity project's resource directory.
-2. Modify your project's TMP Settings object to point to the resource folder. I'm not sure if it's important to change the default sprite asset but I included it just in case.
+2. Modify your project's TMP Settings object to point to the resource folder. You shouldn't need to change the default sprite asset to the one in here but I included it just in case.
 3. Use AppleControllerSpriteManager.cs to get the glyphs into TMP. Note that this file has been modified a bit to remove some game-specific stuff so it's untested but it should mostly work. Consider submitting a pull request if you find an issue and fix it!
 
 The method used to do this make this work is somewhat explained here: https://forum.unity.com/threads/inline-graphics-require-sprite-sheets.474109/
