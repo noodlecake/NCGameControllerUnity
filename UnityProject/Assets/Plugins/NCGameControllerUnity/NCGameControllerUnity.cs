@@ -226,7 +226,7 @@ public class NCGameControllerUnity : MonoBehaviour
             testWrapper = this;
 
             Debug.Log("Controller Connected: " + NCGameControllerUnity.DeviceHasControllerConnected());
-            Debug.Log("Has Extended Profile: " + NCGameControllerUnity.DeviceHasExtededControllerConnected());
+            Debug.Log("Has Extended Profile: " + NCGameControllerUnity.DeviceHasExtendedControllerConnected());
 
             Debug.Log("Register Input Callback: " + NCGameControllerUnity.RegisterControllerInputCallback(ControllerInputTest));
             Debug.Log("Register Connected Callback: " + NCGameControllerUnity.RegisterControllerConnectedCallback(ControllerConnectedTest));
