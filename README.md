@@ -23,7 +23,7 @@ Tips
 - If you want to get an idea of how the symbols look without messing with the style in code, download the SF Symbols app which allows you to see all of the symbols and try the different weights: https://developer.apple.com/sf-symbols/
 - This plugin will work in the editor if you're developing on a Mac and have your platform set to "PC, Mac & Linux Standalone". If you make changes to the underlying Mac bundle of the plugin you'll need to restart Unity to see your changes though.
 - This plugin requires iOS 14+ / tvOS 14+ / macOS 11.0 (Big Sur) since that's when the glyphs were added to Apple's Game Controller framework. The input handling could probably work on older OS versions but you would need to rebuild the libraries with a lower minimum OS version.
--Input for the Dpad will come in both as DpadX/DpadY and ButtonUp/ButtonDown/ButtonLeft/ButtonRight at the same time. Choose whichever input method makes sense for your game and just ignore input from the other.
+- Input for the Dpad will come in both as DpadX/DpadY and ButtonUp/ButtonDown/ButtonLeft/ButtonRight at the same time. Choose whichever input method makes sense for your game and just ignore input from the other.
 
 Potential Improvements
 -----------------------
