@@ -16,8 +16,6 @@
 		B5E2AE1325A6794200E541C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E2AE1225A6794200E541C9 /* Assets.xcassets */; };
 		B5E2AE1625A6794200E541C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E2AE1425A6794200E541C9 /* Main.storyboard */; };
 		B5E2AE1925A6794200E541C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E2AE1825A6794200E541C9 /* main.m */; };
-		B5E2AE2425A6794200E541C9 /* GameControllerWrapperTesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E2AE2325A6794200E541C9 /* GameControllerWrapperTesterTests.m */; };
-		B5E2AE2F25A6794200E541C9 /* GameControllerWrapperTesterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E2AE2E25A6794200E541C9 /* GameControllerWrapperTesterUITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,11 +53,7 @@
 		B5E2AE1825A6794200E541C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B5E2AE1A25A6794200E541C9 /* GameControllerWrapperTester.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameControllerWrapperTester.entitlements; sourceTree = "<group>"; };
 		B5E2AE1F25A6794200E541C9 /* GameControllerWrapperTesterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameControllerWrapperTesterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5E2AE2325A6794200E541C9 /* GameControllerWrapperTesterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameControllerWrapperTesterTests.m; sourceTree = "<group>"; };
-		B5E2AE2525A6794200E541C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5E2AE2A25A6794200E541C9 /* GameControllerWrapperTesterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameControllerWrapperTesterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5E2AE2E25A6794200E541C9 /* GameControllerWrapperTesterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameControllerWrapperTesterUITests.m; sourceTree = "<group>"; };
-		B5E2AE3025A6794200E541C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				B5E2AE0425A6793F00E541C9 /* GameControllerWrapperTester */,
-				B5E2AE2225A6794200E541C9 /* GameControllerWrapperTesterTests */,
-				B5E2AE2D25A6794200E541C9 /* GameControllerWrapperTesterUITests */,
 				B5E2AE0325A6793F00E541C9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,24 +119,6 @@
 				B5E2AE1A25A6794200E541C9 /* GameControllerWrapperTester.entitlements */,
 			);
 			path = GameControllerWrapperTester;
-			sourceTree = "<group>";
-		};
-		B5E2AE2225A6794200E541C9 /* GameControllerWrapperTesterTests */ = {
-			isa = PBXGroup;
-			children = (
-				B5E2AE2325A6794200E541C9 /* GameControllerWrapperTesterTests.m */,
-				B5E2AE2525A6794200E541C9 /* Info.plist */,
-			);
-			path = GameControllerWrapperTesterTests;
-			sourceTree = "<group>";
-		};
-		B5E2AE2D25A6794200E541C9 /* GameControllerWrapperTesterUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B5E2AE2E25A6794200E541C9 /* GameControllerWrapperTesterUITests.m */,
-				B5E2AE3025A6794200E541C9 /* Info.plist */,
-			);
-			path = GameControllerWrapperTesterUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5E2AE2425A6794200E541C9 /* GameControllerWrapperTesterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +270,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5E2AE2F25A6794200E541C9 /* GameControllerWrapperTesterUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
