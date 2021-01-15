@@ -153,13 +153,13 @@ public class AppleControllerSpriteManager2
 		    }
 	    }
 
-        //Handle axis values you might get from Rewired
-        if (value == "DpadX") return NCGameControllerUnity.NCControlElementID.ThumbstickLeft;
-        if (value == "DpadY") return NCGameControllerUnity.NCControlElementID.ThumbstickLeft;
-	    if (value == "ThumbstickLeftX") return NCGameControllerUnity.NCControlElementID.ThumbstickRight;
-        if (value == "ThumbstickLeftY") return NCGameControllerUnity.NCControlElementID.ThumbstickRight;
-        if (value == "ThumbstickRightX") return NCGameControllerUnity.NCControlElementID.Dpad;
-        if (value == "ThumbstickRightY") return NCGameControllerUnity.NCControlElementID.Dpad;
+	    //Handle axis values you might get from Rewired
+        if (value == "DpadX") return NCGameControllerUnity.NCControlElementID.Dpad;
+        if (value == "DpadY") return NCGameControllerUnity.NCControlElementID.Dpad;
+	    if (value == "ThumbstickLeftX") return NCGameControllerUnity.NCControlElementID.ThumbstickLeft;
+        if (value == "ThumbstickLeftY") return NCGameControllerUnity.NCControlElementID.ThumbstickLeft;
+        if (value == "ThumbstickRightX") return NCGameControllerUnity.NCControlElementID.ThumbstickRight;
+        if (value == "ThumbstickRightY") return NCGameControllerUnity.NCControlElementID.ThumbstickRight;
         if (value == "TriggerLeftMagnitude") return NCGameControllerUnity.NCControlElementID.ButtonTriggerLeft;
         if (value == "TriggerRightMagnitude") return NCGameControllerUnity.NCControlElementID.ButtonTriggerRight;
 	    
