@@ -187,10 +187,10 @@ BOOL NCRegisterInputCallback(void (*unity_callback)(int, float, float)) {
                     elemId = Dpad;
                 }
                 
-                if (elemId <= ButtonThumbstickRight) {
+                if ([element isKindOfClass:[GCControllerButtonInput class]]) {
                     val1 = ((GCControllerButtonInput*)element).value;
                     val2 = ((GCControllerButtonInput*)element).pressed;
-                } else if (elemId <= ThumbstickRight) {
+                } else if ([element isKindOfClass:[GCControllerDirectionPad class]]) {
                     val1 = ((GCControllerDirectionPad*)element).xAxis.value;
                     val2 = ((GCControllerDirectionPad*)element).yAxis.value;
                 }
